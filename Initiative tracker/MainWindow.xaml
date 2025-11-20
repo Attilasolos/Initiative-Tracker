@@ -7,17 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="558,201,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <ComboBox HorizontalAlignment="Left" Margin="43,51,0,0" VerticalAlignment="Top" Width="120"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="605,305,0,0" VerticalAlignment="Top"/>
-        <DatePicker HorizontalAlignment="Left" Margin="688,10,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="80,72,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <ComboBox HorizontalAlignment="Center" Margin="0,126,0,0" VerticalAlignment="Top" Width="120"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="130,58,0,0" VerticalAlignment="Top" Height="51" Grid.Row="1" Grid.Column="1" Width="117"/>
+        <DatePicker HorizontalAlignment="Left" Margin="158,85,0,0" VerticalAlignment="Top" Width="102" Grid.Row="1"/>
         <Grid.RowDefinitions>
             <RowDefinition>
-                
+
             </RowDefinition>
             <RowDefinition>
 
             </RowDefinition>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>
+
+            </ColumnDefinition>
+            <ColumnDefinition>
+
+            </ColumnDefinition>
+
+
+        </Grid.ColumnDefinitions>
     </Grid>
 </Window>
