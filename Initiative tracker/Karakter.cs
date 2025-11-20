@@ -53,7 +53,7 @@ namespace Initiative_tracker
         }
         public void Sorba_Rakás()
         {
-            Rendezesi_Ertek = rnd.Next(1,20);
+            Rendezesi_Ertek = rnd.Next(1, 20);
         }
     }
 }
