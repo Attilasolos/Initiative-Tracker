@@ -6,24 +6,74 @@
         xmlns:local="clr-namespace:Initiative_tracker"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <!--   Styles   -->
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FF54442B"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="Border">
+            <Setter Property="Background" Value="#54442B"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+        </Style>
+        <Style TargetType="ListBox">
+
+        </Style>
+        <Style TargetType="DatePicker">
+            <Setter Property="Background" Value="{x:Null}"/>
+        </Style>
+    </Window.Resources>
+
+
+
+
+
+    <!--   Grid   -->
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="80,72,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <ComboBox HorizontalAlignment="Center" Margin="0,126,0,0" VerticalAlignment="Top" Width="120"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="130,58,0,0" VerticalAlignment="Top" Height="51" Grid.Row="1" Grid.Column="1" Width="117"/>
-        <DatePicker HorizontalAlignment="Left" Margin="158,85,0,0" VerticalAlignment="Top" Width="102" Grid.Row="1"/>
         <Grid.RowDefinitions>
-            <RowDefinition>
-
-            </RowDefinition>
-            <RowDefinition>
-
-            </RowDefinition>
+            <RowDefinition Height="188*"/>
+            <RowDefinition Height="29*"/>
         </Grid.RowDefinitions>
+        <!--   Textboxes   -->
+        <TextBox HorizontalAlignment="Left" Margin="40,30,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="291" Grid.Column="1" Height="46" FontSize="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+        <TextBox HorizontalAlignment="Left" Margin="351,30,0,0" TextWrapping="Wrap" Text="HP" VerticalAlignment="Top" Width="125" Grid.Column="1" Height="46" FontSize="30" TextAlignment="Center"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="351,93,0,0" TextWrapping="Wrap" Text="Bonus" VerticalAlignment="Top" Width="125" TextAlignment="Center" Height="18"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="351,116,0,0" TextWrapping="Wrap" Text="Initiative" VerticalAlignment="Top" Width="125" TextAlignment="Center" Height="18"/>
+
+        <!--   Checkboxes   -->
+        <CheckBox Content="Action" HorizontalAlignment="Left" Margin="40,81,0,0" VerticalAlignment="Top" Height="20" Grid.Column="1" Width="116"/>
+        <CheckBox Content="Bonus action" HorizontalAlignment="Left" Margin="40,101,0,0" VerticalAlignment="Top" Height="20" Grid.Column="1" Width="116"/>
+        <CheckBox Content="Reaction" HorizontalAlignment="Left" Margin="40,121,0,0" VerticalAlignment="Top" Height="20" Grid.Column="1" Width="116"/>
+
+        <!--   Egyébb   -->
+        <DatePicker HorizontalAlignment="Left" Margin="40,308,0,0" VerticalAlignment="Top" Width="182" Grid.Column="1" Height="40"/>
+
+
+        <!--   Kezelő felület   -->
+        <ComboBox HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="232" Grid.Column="1" Height="42" Grid.Row="1"/>
+        <Button Grid.Column="1" Content="Add" HorizontalAlignment="Left" Margin="264,10,10,10" VerticalAlignment="Top" Height="42" Width="100" Grid.Row="1"/>
+        <Button Grid.Column="1" Content="Start" HorizontalAlignment="Left" Margin="391,10,10,10" VerticalAlignment="Top" Height="42" Width="100" Grid.Row="1"/>
+
+
+        <Border BorderBrush="Black" BorderThickness="1" CornerRadius="20" Padding="10,10,10,10" Margin="10,10,10,10" Grid.RowSpan="2" Panel.ZIndex="-1">
+            <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="10,10,10,10" CornerRadius="20,20,20,20" Panel.ZIndex="-1"/>
+
+
+        <!--   Szerkezet   -->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition>
+            <ColumnDefinition Width="37*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="63*">
 
             </ColumnDefinition>
 
