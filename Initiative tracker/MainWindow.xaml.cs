@@ -39,7 +39,7 @@ namespace Initiative_tracker
             Hpbx.Text = $"HP: {karakterek[Index].HP}";
             if (karakterek[Index].Akcio == true)
             {
-                ACCB.IsChecked = true  ;
+                ACCB.IsChecked = true;
             }
             else
             {

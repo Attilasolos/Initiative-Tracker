@@ -15,8 +15,8 @@
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="FontSize" Value="16"/>
         </Style>
-        
-        
+
+
         <Style TargetType="Border">
             <Setter Property="Background" Value="#158bcf"/>
         </Style>
