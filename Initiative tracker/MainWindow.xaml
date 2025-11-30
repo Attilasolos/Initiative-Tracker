@@ -20,23 +20,29 @@
         <Style TargetType="Border">
             <Setter Property="Background" Value="#158bcf"/>
         </Style>
-        
-        
-        
+
+
+
         <Style TargetType="TextBox">
             <Setter Property="Background" Value="{x:Null}"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="Panel.ZIndex" Value="10"/>
         </Style>
-        
-        
-        
+        <Style TargetType="Label">
+            <Setter Property="Panel.ZIndex" Value="10"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
+
+
+
         <Style TargetType="ListBox">
 
         </Style>
-        
-        
-        
+
+
+
         <Style TargetType="DatePicker">
             <Setter Property="Background" Value="{x:Null}"/>
             <Setter Property="Foreground" Value="White"/>
@@ -45,14 +51,14 @@
         <Style TargetType="DatePickerTextBox">
             <Setter Property="Background" Value="{x:Null}"/>
         </Style>
-        
+
         <Style TargetType="CheckBox" >
             <Setter Property="Foreground" Value="White"/>
         </Style>
 
 
 
-                    <Style TargetType="Grid">
+        <Style TargetType="Grid">
             <Setter Property="Background" Value="#34e1eb"/>
         </Style>
     </Window.Resources>
@@ -64,34 +70,39 @@
     <!--   Grid   -->
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="188*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="139*"/>
             <RowDefinition Height="29*"/>
         </Grid.RowDefinitions>
+        <!--   Labels   -->
+        <Label Content="HP : " HorizontalAlignment="Left" Margin="351,25,0,0" VerticalAlignment="Top" Height="56" Grid.Column="1" Width="291"/>
+
         <!--   Textboxes   -->
-        <TextBox Name="Nmbx" HorizontalAlignment="Left" Margin="40,30,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="291" Grid.Column="1" Height="46" FontSize="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
-        <TextBox Name="Hpbx" HorizontalAlignment="Left" Margin="351,30,0,0" TextWrapping="Wrap" Text="HP" VerticalAlignment="Top" Width="125" Grid.Column="1" Height="46" FontSize="30" TextAlignment="Center"/>
-        <TextBox Name="Bbx"  Grid.Column="1" HorizontalAlignment="Left" Margin="351,93,0,0" TextWrapping="Wrap" Text="Bonus" VerticalAlignment="Top" Width="125" TextAlignment="Center" Height="18"/>
-        <TextBox Name="Ibx" Grid.Column="1" HorizontalAlignment="Left" Margin="351,116,0,0" TextWrapping="Wrap" Text="Initiative" VerticalAlignment="Top" Width="125" TextAlignment="Center" Height="18"/>
+        <TextBox Name="Nmbx" HorizontalAlignment="Left" Margin="40,30,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="291" Grid.Column="1" Height="46" FontSize="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" TextChanged="Nmbx_TextChanged"/>
+        <TextBox Name="Hpbx" HorizontalAlignment="Left" Margin="406,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" Grid.Column="1" Height="46" FontSize="30" TextAlignment="Center" TextChanged="Hpbx_TextChanged"/>
+        <TextBox Name="Bbx"  Grid.Column="1" HorizontalAlignment="Left" Margin="351,26,0,0" TextWrapping="Wrap" Text="Bonus" VerticalAlignment="Top" Width="125" TextAlignment="Center" Height="18" Grid.Row="1"/>
+        <TextBox Name="Ibx" Grid.Column="1" HorizontalAlignment="Left" Margin="351,49,0,0" TextWrapping="Wrap" Text="Initiative" VerticalAlignment="Top" Width="125" TextAlignment="Center" Height="18" Grid.Row="1"/>
 
         <!--   Checkboxes   -->
-        <CheckBox Name="ACCB" Content="Action" HorizontalAlignment="Left" Margin="40,81,0,0" VerticalAlignment="Top" Height="20" Grid.Column="1" Width="116" Checked="ACCB_Checked"/>
-        <CheckBox Name="BACB" Content="Bonus action" HorizontalAlignment="Left" Margin="40,101,0,0" VerticalAlignment="Top" Height="20" Grid.Column="1" Width="116" Checked="BACB_Checked"/>
-        <CheckBox Name="RCB" Content="Reaction" HorizontalAlignment="Left" Margin="40,121,0,0" VerticalAlignment="Top" Height="20" Grid.Column="1" Width="116" Checked="RCB_Checked"/>
+        <CheckBox Name="ACCB" Content="Action" HorizontalAlignment="Left" Margin="40,14,0,0" VerticalAlignment="Top" Height="20" Grid.Column="1" Width="116" Checked="ACCB_Checked" Grid.Row="1"/>
+        <CheckBox Name="BACB" Content="Bonus action" HorizontalAlignment="Left" Margin="40,34,0,0" VerticalAlignment="Top" Height="20" Grid.Column="1" Width="116" Checked="BACB_Checked" Grid.Row="1"/>
+        <CheckBox Name="RCB" Content="Reaction" HorizontalAlignment="Left" Margin="40,54,0,0" VerticalAlignment="Top" Height="20" Grid.Column="1" Width="116" Checked="RCB_Checked" Grid.Row="1"/>
 
         <!--   Egyébb   -->
-        <DatePicker Name="BTDP" HorizontalAlignment="Left" Margin="40,308,0,0" VerticalAlignment="Top" Width="182" Grid.Column="1" Height="40" SelectedDate="1000-10-10"/>
+        <DatePicker Name="BTDP" HorizontalAlignment="Left" Margin="27,10,0,0" VerticalAlignment="Bottom" Width="182" Grid.Column="1" Height="40" SelectedDate="1000-10-10" Grid.Row="1"/>
 
 
         <!--   Kezelő felület   -->
-        <ComboBox HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="232" Grid.Column="1" Height="42" Grid.Row="1"/>
-        <Button Grid.Column="1" Content="Add" HorizontalAlignment="Left" Margin="264,10,10,10" VerticalAlignment="Top" Height="42" Width="100" Grid.Row="1"/>
-        <Button Grid.Column="1" Content="Start" HorizontalAlignment="Left" Margin="391,10,10,10" VerticalAlignment="Top" Height="42" Width="100" Grid.Row="1"/>
+        <ComboBox HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="232" Grid.Column="1" Height="42" Grid.Row="2"/>
+        <Button Grid.Column="1" Content="Add" HorizontalAlignment="Left" Margin="264,10,0,0" VerticalAlignment="Top" Height="42" Width="100" Grid.Row="2"/>
+        <Button Grid.Column="1" Content="Start" HorizontalAlignment="Left" Margin="391,10,0,0" VerticalAlignment="Top" Height="42" Width="100" Grid.Row="2" Click="Button_Click"/>
 
 
-        <Border BorderBrush="Black" BorderThickness="1" CornerRadius="20" Padding="10,10,10,10" Margin="10,10,10,10" Grid.RowSpan="2" Panel.ZIndex="-1">
+        <Border BorderBrush="Black" BorderThickness="1" CornerRadius="20" Padding="10,10,10,10" Margin="10,10,10,10" Grid.RowSpan="3" Panel.ZIndex="-1">
             <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" SelectionChanged="ListBox_SelectionChanged" Name="lstbx1"/>
         </Border>
-        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="10,10,10,10" CornerRadius="20,20,20,20" Panel.ZIndex="-1"/>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="10,10,10,10" CornerRadius="20,20,20,20" Panel.ZIndex="-1" Grid.RowSpan="2"/>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="338,25,28,17" Background="#FF34E1EB" CornerRadius="20,20,20,20" />
 
 
         <!--   Szerkezet   -->

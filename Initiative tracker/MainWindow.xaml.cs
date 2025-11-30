@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,53 +20,61 @@ namespace Initiative_tracker
     public partial class MainWindow : Window
     {
         private List<Karakter> karakterek = new List<Karakter>();
+        private int Index = 0;
         public MainWindow()
         {
             InitializeComponent();
             
-            karakterek = Karakter.Read(); 
-            
-            foreach(var k in karakterek)
-            {
-                lstbx1.Items.Add(k.Nev);
-            }
+            karakterek = Karakter.Read();
+
+            Frissit();
 
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            int Index = lstbx1.SelectedIndex;
-            Nmbx.Text = $"Name: {karakterek[Index].Nev}";
-            Hpbx.Text = $"HP: {karakterek[Index].HP}";
-            if (karakterek[Index].Akcio == true)
+            Index = lstbx1.SelectedIndex;
+            Listaválasztás(Index);
+        }
+        private void Listaválasztás(int Index)
+        {
+            if (Index >=0 && Index <= karakterek.Count-1)
             {
-                ACCB.IsChecked = true;
-            }
-            else
-            {
-                ACCB.IsChecked = false ;
-            }
-            if (karakterek[Index].Bonusz_Akcio == true)
-            {
-                BACB.IsChecked = true;
-            }
-            else
-            {
-                BACB.IsChecked = false;
-            }
-            if (karakterek[Index].Reakcio == true)
-            { 
-                RCB.IsChecked = true ;
-            }
-            else
-            {
-                RCB.IsChecked = false;
-            }
-            BTDP.SelectedDate = karakterek[Index].Szuletesi_Datum;
+                Nmbx.Text = $"{karakterek[Index].Nev}";
+                Hpbx.Text = $"{karakterek[Index].HP}";
+                
+                if (karakterek[Index].Akcio == true)
+                {
+                    ACCB.IsChecked = true;
+                }
+                else
+                {
+                    ACCB.IsChecked = false;
+                }
+                if (karakterek[Index].Bonusz_Akcio == true)
+                {
+                    BACB.IsChecked = true;
+                }
+                else
+                {
+                    BACB.IsChecked = false;
+                }
+                if (karakterek[Index].Reakcio == true)
+                {
+                    RCB.IsChecked = true;
+                }
+                else
+                {
+                    RCB.IsChecked = false;
+                }
+                
+                BTDP.SelectedDate = karakterek[Index].Szuletesi_Datum;
 
-            Bbx.Text = $"Bónusz: {karakterek[Index].Bonusz}";
+                Bbx.Text = $"Bónusz: {karakterek[Index].Bonusz}";
 
-            Ibx.Text = $"Initiative: {karakterek[Index].Rendezesi_Ertek}";
+                Ibx.Text = $"Initiative: {karakterek[Index].Rendezesi_Ertek}";
+            }
+            
         }
 
         private void ACCB_Checked(object sender, RoutedEventArgs e)
@@ -82,5 +91,42 @@ namespace Initiative_tracker
         {
             
         }
+
+
+        /// lista frissitése (lista újrarendezése, listBox kiírás, combobox kiírás)
+        private void Frissit()
+        {
+            karakterek = karakterek.OrderByDescending(k => k.Rendezesi_Ertek).ToList();
+            lstbx1.SelectedIndex=-1;
+            lstbx1.Items.Clear();
+            lstbx1.SelectedIndex = -1;
+            foreach (var item in karakterek)
+            {
+                lstbx1.Items.Add(item.Nev);
+            }
+
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frissit();
+        }
+
+        /// karakter törlése (combobox)
+        /// karakter hozzáadás (Add gomb)
+        /// karakter adatainak módosítása (Minden alkalommal amikor valamit beírnak automatikusan meghívja)
+        
+        private void Hpbx_TextChanged(object sender, TextChangedEventArgs e)
+        {
+        }
+
+        private void Nmbx_TextChanged(object sender, TextChangedEventArgs e)
+        {
+        }
+
+        /// txt frissítése
+        /// 
+
     }
 }

@@ -55,7 +55,7 @@ namespace Initiative_tracker
             }
             Szuletesi_Datum = DateTime.Parse(Data[6]);
 
-            Rendezesi_Ertek = rnd.Next(1, 20);
+            Rendezesi_Ertek = int.Parse(Data[7]);
         }
 
 
