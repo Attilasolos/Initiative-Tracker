@@ -25,7 +25,7 @@ namespace Initiative_tracker
         {
             InitializeComponent();
             
-            karakterek = Karakter.Read();
+            karakterek = Karakter.LoadFromJson();
 
             Frissit();
 
@@ -79,17 +79,42 @@ namespace Initiative_tracker
 
         private void ACCB_Checked(object sender, RoutedEventArgs e)
         {
-            
-        }
+           int I = lstbx1.SelectedIndex;
+           if(ACCB.IsChecked == true)
+            {
+                karakterek[I].Akcio = true;
+            }
+            else
+            {
 
+                karakterek[I].Akcio = false;
+            }
+        }
         private void BACB_Checked(object sender, RoutedEventArgs e)
         {
-            
+            int I = lstbx1.SelectedIndex;
+            if (BACB.IsChecked == true)
+            {
+                karakterek[I].Bonusz_Akcio = true;
+            }
+            else
+            {
+
+                karakterek[I].Bonusz_Akcio = false;
+            }
         }
 
         private void RCB_Checked(object sender, RoutedEventArgs e)
         {
-            
+            int I = lstbx1.SelectedIndex;
+            if (RCB.IsChecked == true)
+            {
+                karakterek[I].Reakcio = true;
+            }
+            else
+            {
+                karakterek[I].Reakcio = false;
+            }
         }
 
 
