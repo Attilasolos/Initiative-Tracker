@@ -26,8 +26,10 @@ namespace Initiative_tracker
             InitializeComponent();
             
             karakterek = Karakter.LoadFromJson();
-
+            
             Frissit();
+            lstbx1.SelectedIndex = 0;
+
 
         }
 
@@ -70,9 +72,9 @@ namespace Initiative_tracker
                 
                 BTDP.SelectedDate = karakterek[Index].Szuletesi_Datum;
 
-                Bbx.Text = $"Bónusz: {karakterek[Index].Bonusz}";
+                Bbx.Text = $"{karakterek[Index].Bonusz}";
 
-                Ibx.Text = $"Initiative: {karakterek[Index].Rendezesi_Ertek}";
+                Ibx.Text = $"{karakterek[Index].Rendezesi_Ertek}";
             }
             
         }
@@ -121,7 +123,7 @@ namespace Initiative_tracker
         /// lista frissitése (lista újrarendezése, listBox kiírás, combobox kiírás)
         private void Frissit()
         {
-            karakterek = karakterek.OrderByDescending(k => k.Rendezesi_Ertek).ToList();
+            karakterek = karakterek.OrderByDescending(k => k.Rendezesi_Ertek+k.Bonusz).ToList();
             eraseCB.SelectedIndex=-1;
             eraseCB.Items.Clear();
             lstbx1.SelectedIndex=-1;
@@ -142,7 +144,6 @@ namespace Initiative_tracker
         /// karakter törlése (combobox)
         private void Törlés(int index)
         {
-            Nmbx.Text = index.ToString();
             if (index != -1)
             {
                 karakterek.RemoveAt(index);
@@ -152,7 +153,7 @@ namespace Initiative_tracker
         /// karakter hozzáadás (Add gomb)
         private void UjKarakter()
         {
-            Karakter ujkarakter = new Karakter("hi",10,1,1,false,false,false,DateTime.Now);
+            Karakter ujkarakter = new Karakter("Új karakter",1,0,1,false,false,false,DateTime.Now);
             karakterek.Add(ujkarakter);
             Frissit();
             lstbx1.SelectedIndex = karakterek.IndexOf(ujkarakter);
