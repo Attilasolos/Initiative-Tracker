@@ -19,6 +19,18 @@ namespace Initiative_tracker
         // Empty constructor needed for JSON deserialization
         public Karakter() { }
 
+        public Karakter(string nev, int hP, int bonusz, int rendezesi_Ertek, bool akcio, bool bonusz_Akcio, bool reakcio, DateTime szuletesi_Datum)
+        {
+            Nev = nev;
+            HP = hP;
+            Bonusz = bonusz;
+            Rendezesi_Ertek = rendezesi_Ertek;
+            Akcio = akcio;
+            Bonusz_Akcio = bonusz_Akcio;
+            Reakcio = reakcio;
+            Szuletesi_Datum = szuletesi_Datum;
+        }
+
         /// <summary>
         /// Loads and parses karakterek.json into a List<Karakter>.
         /// </summary>

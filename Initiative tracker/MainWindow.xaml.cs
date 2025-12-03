@@ -122,15 +122,16 @@ namespace Initiative_tracker
         private void Frissit()
         {
             karakterek = karakterek.OrderByDescending(k => k.Rendezesi_Ertek).ToList();
+            eraseCB.SelectedIndex=-1;
+            eraseCB.Items.Clear();
             lstbx1.SelectedIndex=-1;
             lstbx1.Items.Clear();
-            lstbx1.SelectedIndex = -1;
+
             foreach (var item in karakterek)
             {
                 lstbx1.Items.Add(item.Nev);
+                eraseCB.Items.Add(item.Nev);
             }
-
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -139,7 +140,24 @@ namespace Initiative_tracker
         }
 
         /// karakter törlése (combobox)
+        private void Törlés(int index)
+        {
+            Nmbx.Text = index.ToString();
+            if (index != -1)
+            {
+                karakterek.RemoveAt(index);
+            }
+            Frissit();
+        }
         /// karakter hozzáadás (Add gomb)
+        private void UjKarakter()
+        {
+            Karakter ujkarakter = new Karakter("hi",10,1,1,false,false,false,DateTime.Now);
+            karakterek.Add(ujkarakter);
+            Frissit();
+            lstbx1.SelectedIndex = karakterek.IndexOf(ujkarakter);
+            
+        }
         /// karakter adatainak módosítása (Minden alkalommal amikor valamit beírnak automatikusan meghívja)
         
         private void Hpbx_TextChanged(object sender, TextChangedEventArgs e)
@@ -150,7 +168,20 @@ namespace Initiative_tracker
         {
         }
 
-        /// txt frissítése
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (eraseCB.SelectedIndex != -1)
+            {
+                Törlés(eraseCB.SelectedIndex);
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            UjKarakter();
+        }
+
+        /// json frissítése
         /// 
 
     }
