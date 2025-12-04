@@ -48,5 +48,14 @@ namespace Initiative_tracker
 
             return JsonSerializer.Deserialize<List<Karakter>>(json)!;
         }
+        public static void SaveToJson(List<Karakter> karakterek, string filename = "karakterek.json")
+        {
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+            string json = JsonSerializer.Serialize(karakterek, options);
+            File.WriteAllText(filename, json);
+        }
     }
 }

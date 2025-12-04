@@ -128,6 +128,7 @@ namespace Initiative_tracker
             eraseCB.Items.Clear();
             lstbx1.SelectedIndex=-1;
             lstbx1.Items.Clear();
+            Karakter.SaveToJson(karakterek);
 
             foreach (var item in karakterek)
             {
@@ -161,12 +162,16 @@ namespace Initiative_tracker
         }
         /// karakter adatainak módosítása (Minden alkalommal amikor valamit beírnak automatikusan meghívja)
         
-        private void Hpbx_TextChanged(object sender, TextChangedEventArgs e)
+        private void Hpbx_TextChanged(object sender, RoutedEventArgs e)
         {
+            int I = lstbx1.SelectedIndex;
+            karakterek[I].HP = int.Parse(Hpbx.Text);
         }
 
-        private void Nmbx_TextChanged(object sender, TextChangedEventArgs e)
+        private void Nmbx_TextChanged(object sender, RoutedEventArgs e)
         {
+            int I = lstbx1.SelectedIndex;
+            karakterek[I].Nev = Nmbx.Text;
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -180,6 +185,23 @@ namespace Initiative_tracker
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             UjKarakter();
+        }
+
+        private void Bbx_TextChanged(object sender, RoutedEventArgs e)
+        {
+            int I = lstbx1.SelectedIndex;
+            karakterek[I].Bonusz = int.Parse(Bbx.Text);
+        }
+
+        private void Ibx_TextChanged(object sender, RoutedEventArgs e)
+        {
+            int I = lstbx1.SelectedIndex;
+            karakterek[I].Rendezesi_Ertek = int.Parse(Ibx.Text);
+        }
+        private void BTDP_DateChanged(object sender, RoutedEventArgs e)
+        {
+            int I = lstbx1.SelectedIndex;
+            karakterek[I].Szuletesi_Datum = BTDP.SelectedDate!.Value;
         }
 
         /// json frissítése
