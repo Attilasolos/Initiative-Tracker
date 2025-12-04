@@ -21,6 +21,8 @@ namespace Initiative_tracker
     {
         private List<Karakter> karakterek = new List<Karakter>();
         private int Index = 0;
+        private bool mehet = false;
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -29,6 +31,7 @@ namespace Initiative_tracker
             
             Frissit();
             lstbx1.SelectedIndex = 0;
+            mehet = true;
 
 
         }
@@ -38,14 +41,134 @@ namespace Initiative_tracker
             Index = lstbx1.SelectedIndex;
             Listaválasztás(Index);
         }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            randomolas();
+        }
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (eraseCB.SelectedIndex != -1)
+            {
+                Törlés(eraseCB.SelectedIndex);
+            }
+        }
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            UjKarakter();
+        }
+
+
+        private void ACCB_Checked(object sender, RoutedEventArgs e)
+        {
+            int I = lstbx1.SelectedIndex;
+            if (ACCB.IsChecked == true)
+                {
+                karakterek[I].Akcio = true;
+                }
+                else
+                {
+
+                karakterek[I].Akcio = false;
+                }
+                
+            
+           
+        }
+        private void BACB_Checked(object sender, RoutedEventArgs e)
+        {
+            int I = lstbx1.SelectedIndex;
+            if (I != -1)
+            {
+                if (BACB.IsChecked == true)
+                {
+                    karakterek[I].Bonusz_Akcio = true;
+                }
+                else
+                {
+
+                    karakterek[I].Bonusz_Akcio = false;
+                }
+                
+            }
+            
+        }
+        private void RCB_Checked(object sender, RoutedEventArgs e)
+        {
+            int I = lstbx1.SelectedIndex;
+            if (I != -1)
+            {
+                if (RCB.IsChecked == true)
+                {
+                    karakterek[I].Reakcio = true;
+                }
+                else
+                {
+                    karakterek[I].Reakcio = false;
+                }
+                
+            }
+            
+        }
+        private void Hpbx_TextChanged(object sender, RoutedEventArgs e)
+        {
+            int I = lstbx1.SelectedIndex;
+            if (I != -1)
+            {
+                karakterek[I].HP = int.Parse(Hpbx.Text);
+                
+            }
+            
+        }
+        private void Nmbx_TextChanged(object sender, RoutedEventArgs e)
+        {
+            int I = lstbx1.SelectedIndex;
+            if (lstbx1.SelectedIndex != -1)
+            {
+                karakterek[I].Nev = Nmbx.Text;
+                
+            }
+            
+        }
+        private void Bbx_TextChanged(object sender, RoutedEventArgs e)
+        {
+            int I = lstbx1.SelectedIndex;
+            if (I != -1)
+            {
+                karakterek[I].Bonusz = int.Parse(Bbx.Text);
+                
+            }
+            
+        }
+        private void Ibx_TextChanged(object sender, RoutedEventArgs e)
+        {
+            int I = lstbx1.SelectedIndex;
+            if (I != -1)
+            {
+                karakterek[I].Rendezesi_Ertek = int.Parse(Ibx.Text);
+                
+            }
+            
+        }
+        private void BTDP_DateChanged(object sender, RoutedEventArgs e)
+        {
+            int I = lstbx1.SelectedIndex;
+            if (I != -1)
+            {
+                karakterek[I].Szuletesi_Datum = BTDP.SelectedDate!.Value;
+                
+            }
+            
+        }
+
+
         private void Listaválasztás(int Index)
         {
-            if (Index >=0 && Index <= karakterek.Count-1)
-            {
-                Nmbx.Text = $"{karakterek[Index].Nev}";
-                Hpbx.Text = $"{karakterek[Index].HP}";
-                
-                if (karakterek[Index].Akcio == true)
+            if(lstbx1.SelectedIndex!=-1){
+                Karakter kivalasztott = karakterek[Index];
+                Nmbx.Text = $"{kivalasztott.Nev}";
+                Hpbx.Text = $"{kivalasztott.HP}";
+
+                if (kivalasztott.Akcio == true)
                 {
                     ACCB.IsChecked = true;
                 }
@@ -53,7 +176,7 @@ namespace Initiative_tracker
                 {
                     ACCB.IsChecked = false;
                 }
-                if (karakterek[Index].Bonusz_Akcio == true)
+                if (kivalasztott.Bonusz_Akcio == true)
                 {
                     BACB.IsChecked = true;
                 }
@@ -61,7 +184,7 @@ namespace Initiative_tracker
                 {
                     BACB.IsChecked = false;
                 }
-                if (karakterek[Index].Reakcio == true)
+                if (kivalasztott.Reakcio == true)
                 {
                     RCB.IsChecked = true;
                 }
@@ -69,58 +192,21 @@ namespace Initiative_tracker
                 {
                     RCB.IsChecked = false;
                 }
-                
-                BTDP.SelectedDate = karakterek[Index].Szuletesi_Datum;
 
-                Bbx.Text = $"{karakterek[Index].Bonusz}";
+                BTDP.SelectedDate = kivalasztott.Szuletesi_Datum;
 
-                Ibx.Text = $"{karakterek[Index].Rendezesi_Ertek}";
+                Bbx.Text = $"{kivalasztott.Bonusz}";
+
+                Ibx.Text = $"{kivalasztott.Rendezesi_Ertek}";
             }
             
-        }
 
-        private void ACCB_Checked(object sender, RoutedEventArgs e)
+        }
+        private void betotltes()
         {
-           int I = lstbx1.SelectedIndex;
-           if(ACCB.IsChecked == true)
-            {
-                karakterek[I].Akcio = true;
-            }
-            else
-            {
-
-                karakterek[I].Akcio = false;
-            }
+                
+            
         }
-        private void BACB_Checked(object sender, RoutedEventArgs e)
-        {
-            int I = lstbx1.SelectedIndex;
-            if (BACB.IsChecked == true)
-            {
-                karakterek[I].Bonusz_Akcio = true;
-            }
-            else
-            {
-
-                karakterek[I].Bonusz_Akcio = false;
-            }
-        }
-
-        private void RCB_Checked(object sender, RoutedEventArgs e)
-        {
-            int I = lstbx1.SelectedIndex;
-            if (RCB.IsChecked == true)
-            {
-                karakterek[I].Reakcio = true;
-            }
-            else
-            {
-                karakterek[I].Reakcio = false;
-            }
-        }
-
-
-        /// lista frissitése (lista újrarendezése, listBox kiírás, combobox kiírás)
         private void Frissit()
         {
             karakterek = karakterek.OrderByDescending(k => k.Rendezesi_Ertek+k.Bonusz).ToList();
@@ -136,13 +222,6 @@ namespace Initiative_tracker
                 eraseCB.Items.Add(item.Nev);
             }
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Frissit();
-        }
-
-        /// karakter törlése (combobox)
         private void Törlés(int index)
         {
             if (index != -1)
@@ -151,61 +230,39 @@ namespace Initiative_tracker
             }
             Frissit();
         }
-        /// karakter hozzáadás (Add gomb)
         private void UjKarakter()
         {
-            Karakter ujkarakter = new Karakter("Új karakter",1,0,1,false,false,false,DateTime.Now);
+            Karakter ujkarakter = new Karakter("Új karakter", 1, 0, 1, false, false, false, DateTime.Now);
             karakterek.Add(ujkarakter);
             Frissit();
             lstbx1.SelectedIndex = karakterek.IndexOf(ujkarakter);
-            
-        }
-        /// karakter adatainak módosítása (Minden alkalommal amikor valamit beírnak automatikusan meghívja)
-        
-        private void Hpbx_TextChanged(object sender, RoutedEventArgs e)
-        {
-            int I = lstbx1.SelectedIndex;
-            karakterek[I].HP = int.Parse(Hpbx.Text);
-        }
 
-        private void Nmbx_TextChanged(object sender, RoutedEventArgs e)
-        {
-            int I = lstbx1.SelectedIndex;
-            karakterek[I].Nev = Nmbx.Text;
         }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void randomolas()
         {
-            if (eraseCB.SelectedIndex != -1)
+            Random rnd = new Random();
+            foreach (var item in karakterek)
             {
-                Törlés(eraseCB.SelectedIndex);
+                item.Rendezesi_Ertek = rnd.Next(1, 21);
             }
+            Frissit();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+
+
+
+
+        private void Bbx_TextChanged_1(object sender, TextChangedEventArgs e)
         {
-            UjKarakter();
         }
 
-        private void Bbx_TextChanged(object sender, RoutedEventArgs e)
+        private void Ibx_TextChanged_1(object sender, TextChangedEventArgs e)
         {
-            int I = lstbx1.SelectedIndex;
-            karakterek[I].Bonusz = int.Parse(Bbx.Text);
         }
 
-        private void Ibx_TextChanged(object sender, RoutedEventArgs e)
+        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            int I = lstbx1.SelectedIndex;
-            karakterek[I].Rendezesi_Ertek = int.Parse(Ibx.Text);
+            Frissit();
         }
-        private void BTDP_DateChanged(object sender, RoutedEventArgs e)
-        {
-            int I = lstbx1.SelectedIndex;
-            karakterek[I].Szuletesi_Datum = BTDP.SelectedDate!.Value;
-        }
-
-        /// json frissítése
-        /// 
-
     }
 }

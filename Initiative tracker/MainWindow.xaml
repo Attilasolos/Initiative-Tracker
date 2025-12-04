@@ -10,7 +10,9 @@
     <!--   Styles   -->
     <Window.Resources>
         <Style TargetType="Button">
-            <Setter Property="Background" Value="#158bcf"/>
+            <Setter Property="FontFamily" Value="Book Antiqua"/>
+            <Setter Property="Background" Value="#4C000000"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="FontSize" Value="16"/>
@@ -18,18 +20,21 @@
 
 
         <Style TargetType="Border">
-            <Setter Property="Background" Value="#158bcf"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="Background" Value="#FF6B5E54"/>
         </Style>
 
 
 
         <Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="Book Antiqua"/>
             <Setter Property="Background" Value="{x:Null}"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="BorderBrush" Value="{x:Null}"/>
             <Setter Property="Panel.ZIndex" Value="10"/>
         </Style>
         <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Book Antiqua"/>
             <Setter Property="Panel.ZIndex" Value="10"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontSize" Value="30"/>
@@ -38,6 +43,7 @@
 
 
         <Style TargetType="ListBox">
+            <Setter Property="FontFamily" Value="Book Antiqua"/>
             <Setter Property="Background" Value="#7F000000"/>
             <Setter Property="Foreground" Value="White"/>
 
@@ -46,22 +52,37 @@
 
 
         <Style TargetType="DatePicker">
+            <Setter Property="CalendarStyle" Value="{x:Null}"/>
+            <Setter Property="FontFamily" Value="Book Antiqua"/>
             <Setter Property="Background" Value="{x:Null}"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="BorderBrush" Value="{x:Null}"/>
         </Style>
         <Style TargetType="DatePickerTextBox">
+            <Setter Property="FontFamily" Value="Book Antiqua"/>
             <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
         </Style>
 
         <Style TargetType="CheckBox" >
+            <Setter Property="FontFamily" Value="Book Antiqua"/>
             <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="Width" Value="Auto"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="FontFamily" Value="Book Antiqua"/>
+            <Setter Property="Background" Value="#4C000000"/>
         </Style>
 
 
 
         <Style TargetType="Grid">
-            <Setter Property="Background" Value="#34e1eb"/>
+            <Setter Property="Background" Value="#FF483F3B"/>
         </Style>
     </Window.Resources>
 
@@ -80,18 +101,17 @@
         </Grid.RowDefinitions>
         <!--   Labels   -->
         <Label Content="HP : " HorizontalAlignment="Left" Margin="351,25,0,0" VerticalAlignment="Top" Height="56" Grid.Column="1" Width="291"/>
-        <Label Content="Bónusz :" HorizontalAlignment="Right" Grid.Column="1" Margin="0,11,116,0" Grid.Row="1" FontSize="20" VerticalAlignment="Top" Height="55" Width="96" RenderTransformOrigin="0.037,0.973"></Label>
+        <Label Content="Bonus :" HorizontalAlignment="Right" Grid.Column="1" Margin="0,11,116,0" Grid.Row="1" FontSize="20" VerticalAlignment="Top" Height="55" Width="96" RenderTransformOrigin="0.037,0.973"></Label>
 
         <!--   Textboxes   -->
-        <TextBox Name="Nmbx" HorizontalAlignment="Left" Margin="40,30,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="291" Grid.Column="1" Height="46" FontSize="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" LostFocus="Nmbx_TextChanged" />
+        <TextBox Name="Nmbx" HorizontalAlignment="Left" Margin="40,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="291" Grid.Column="1" Height="46" FontSize="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" LostFocus="Nmbx_TextChanged" />
         <TextBox Name="Hpbx" HorizontalAlignment="Left" Margin="406,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" Grid.Column="1" Height="46" FontSize="30" TextAlignment="Center" LostFocus="Hpbx_TextChanged" />
-        <TextBox Name="Bbx"  Grid.Column="1" HorizontalAlignment="Left" Margin="388,11,0,0" TextWrapping="Wrap" Text="Bonus" VerticalAlignment="Top" Width="94" TextAlignment="Right" Height="55" Grid.Row="1" FontSize="20" LostFocus="Bbx_TextChanged" />
-        <TextBox Name="Ibx" Grid.Column="1" HorizontalAlignment="Left" Margin="388,70,0,0" TextWrapping="Wrap" Text="Initiative" VerticalAlignment="Top" Width="94" TextAlignment="Right" Height="55" Grid.Row="1" FontSize="20" Grid.RowSpan="2" LostFocus="Ibx_TextChanged" />
+        <TextBox Name="Bbx"  Grid.Column="1" HorizontalAlignment="Left" Margin="388,11,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="94" TextAlignment="Right" Height="55" Grid.Row="1" FontSize="20" LostFocus="Bbx_TextChanged" TextChanged="Bbx_TextChanged_1" />
+        <TextBox Name="Ibx" Grid.Column="1" HorizontalAlignment="Left" Margin="388,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="94" TextAlignment="Right" Height="55" Grid.Row="1" FontSize="20" Grid.RowSpan="2" LostFocus="Ibx_TextChanged" TextChanged="Ibx_TextChanged_1" />
 
         <!--   Checkboxes   -->
-        <CheckBox Name="ACCB" Content="Action" HorizontalAlignment="Left" Margin="27,14,0,0" VerticalAlignment="Top" Height="20" Grid.Column="1" Width="116" Checked="ACCB_Checked" Unchecked="ACCB_Checked" Grid.Row="1"/>
-        <CheckBox Name="BACB" Content="Bonus action" HorizontalAlignment="Left" Margin="27,34,0,0" VerticalAlignment="Top" Height="20" Grid.Column="1" Width="116" Checked="BACB_Checked" Unchecked="BACB_Checked" Grid.Row="1"/>
-        <CheckBox Name="RCB" Content="Reaction" HorizontalAlignment="Left" Margin="27,54,0,0" VerticalAlignment="Top" Height="20" Grid.Column="1" Width="116" Checked="RCB_Checked" Unchecked="RCB_Checked" Grid.Row="1"/>
+        <CheckBox Name="ACCB" Content="Action" HorizontalAlignment="Left" Margin="21,0,0,0" VerticalAlignment="Top" Grid.Column="1" Checked="ACCB_Checked" Unchecked="ACCB_Checked" Grid.Row="1"/>
+        <CheckBox Name="RCB" Content="Reaction" HorizontalAlignment="Left" Margin="21,74,0,0" VerticalAlignment="Top" Grid.Column="1" Checked="RCB_Checked" Unchecked="RCB_Checked" Grid.Row="1"/>
 
         <!--   Egyébb   -->
         <DatePicker Name="BTDP" HorizontalAlignment="Left" Margin="35,0,0,10" VerticalAlignment="Bottom" Width="182" Grid.Column="1" Height="40" SelectedDate="1000-10-10" Grid.Row="2" LostFocus="BTDP_DateChanged"/>
@@ -99,12 +119,14 @@
 
         <!--   Kezelő felület   -->
         <ComboBox HorizontalAlignment="Left" Name="eraseCB" Margin="10,10,0,0" VerticalAlignment="Top" Width="232" Grid.Column="1" Height="42" Grid.Row="3" SelectionChanged="ComboBox_SelectionChanged"/>
-        <Button Grid.Column="1" Content="Add" HorizontalAlignment="Left" Margin="266,10,0,0" VerticalAlignment="Top" Height="42" Width="100" Grid.Row="3" Click="Button_Click_1"/>
-        <Button Grid.Column="1" Content="Start" HorizontalAlignment="Left" Margin="391,10,0,0" VerticalAlignment="Top" Height="42" Width="100" Grid.Row="3" Click="Button_Click"/>
-        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="10,10,10,10" CornerRadius="20,20,20,20" Panel.ZIndex="-1" Grid.RowSpan="3"/>
-        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Margin="338,25,28,17" Background="#FF34E1EB" CornerRadius="20,20,20,20" />
-        <Label Content="Akció :" HorizontalAlignment="Right" Grid.Column="1" Margin="0,70,116,0" Grid.Row="1" FontSize="20" VerticalAlignment="Top" Height="55" Width="96" Grid.RowSpan="2"/>
+        <Button Grid.Column="1" Content="Add" HorizontalAlignment="Left" Margin="266,10,0,0" VerticalAlignment="Top" Height="42" Width="57" Grid.Row="3" Click="Button_Click_1"/>
+        <Button Grid.Column="1" Content="re-roll" HorizontalAlignment="Left" Margin="428,10,0,0" VerticalAlignment="Top" Height="42" Width="63" Grid.Row="3" Click="Button_Click"/>
+        <Border BorderThickness="1" Grid.Column="1" Margin="10,10,10,10" CornerRadius="20,20,20,20" Panel.ZIndex="-1" Grid.RowSpan="3"/>
+        <Border BorderThickness="1" Grid.Column="1" Margin="338,25,22,17" CornerRadius="20,20,20,20" Background="#7F000000" />
+        <Label Content="Action :" HorizontalAlignment="Right" Grid.Column="1" Margin="0,70,116,0" Grid.Row="1" FontSize="20" VerticalAlignment="Top" Height="55" Width="96" Grid.RowSpan="2"/>
         <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListBox_SelectionChanged" x:Name="lstbx1" Margin="0,-1,0,0" Grid.RowSpan="4"/>
+        <CheckBox x:Name="BACB" Content="Bonus action" HorizontalAlignment="Left" Margin="21,38,0,0" VerticalAlignment="Top" Grid.Column="1" Checked="BACB_Checked" Unchecked="BACB_Checked" Grid.Row="1"/>
+        <Button Grid.Column="1" Content="Save" HorizontalAlignment="Left" Margin="345,10,0,0" VerticalAlignment="Top" Height="42" Width="62" Grid.Row="3" Click="Button_Click_2"/>
 
 
         <!--   Szerkezet   -->
