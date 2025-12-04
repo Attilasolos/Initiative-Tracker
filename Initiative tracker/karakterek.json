@@ -1,252 +1,252 @@
 [
-	{
-		"Nev": "Arin",
-		"HP": 32,
-		"Bonusz": 2,
-		"Rendezesi_Ertek": 1,
-		"Akcio": true,
-		"Bonusz_Akcio": false,
-		"Reakcio": true,
-		"Szuletesi_Datum": "1998-03-12"
-	},
-	{
-		"Nev": "Thord",
-		"HP": 45,
-		"Bonusz": 1,
-		"Rendezesi_Ertek": 2,
-		"Akcio": true,
-		"Bonusz_Akcio": true,
-		"Reakcio": false,
-		"Szuletesi_Datum": "1985-11-02"
-	},
-	{
-		"Nev": "Lyra",
-		"HP": 28,
-		"Bonusz": 3,
-		"Rendezesi_Ertek": 3,
-		"Akcio": false,
-		"Bonusz_Akcio": true,
-		"Reakcio": true,
-		"Szuletesi_Datum": "2001-07-21"
-	},
-	{
-		"Nev": "Morgath",
-		"HP": 60,
-		"Bonusz": 4,
-		"Rendezesi_Ertek": 3,
-		"Akcio": true,
-		"Bonusz_Akcio": true,
-		"Reakcio": true,
-		"Szuletesi_Datum": "1970-09-05"
-	},
-	{
-		"Nev": "Selene",
-		"HP": 24,
-		"Bonusz": 2,
-		"Rendezesi_Ertek": 4,
-		"Akcio": false,
-		"Bonusz_Akcio": false,
-		"Reakcio": true,
-		"Szuletesi_Datum": "1999-01-30"
-	},
-	{
-		"Nev": "Faelar",
-		"HP": 38,
-		"Bonusz": 3,
-		"Rendezesi_Ertek": 5,
-		"Akcio": true,
-		"Bonusz_Akcio": false,
-		"Reakcio": false,
-		"Szuletesi_Datum": "1993-05-17"
-	},
-	{
-		"Nev": "Rothgar",
-		"HP": 52,
-		"Bonusz": 2,
-		"Rendezesi_Ertek": 6,
-		"Akcio": true,
-		"Bonusz_Akcio": true,
-		"Reakcio": true,
-		"Szuletesi_Datum": "1982-08-14"
-	},
-	{
-		"Nev": "Nimrielle",
-		"HP": 20,
-		"Bonusz": 4,
-		"Rendezesi_Ertek": 7,
-		"Akcio": false,
-		"Bonusz_Akcio": true,
-		"Reakcio": false,
-		"Szuletesi_Datum": "2004-02-28"
-	},
-	{
-		"Nev": "Borin",
-		"HP": 41,
-		"Bonusz": 1,
-		"Rendezesi_Ertek": 8,
-		"Akcio": true,
-		"Bonusz_Akcio": false,
-		"Reakcio": true,
-		"Szuletesi_Datum": "1978-12-07"
-	},
-	{
-		"Nev": "Kaela",
-		"HP": 27,
-		"Bonusz": 2,
-		"Rendezesi_Ertek": 9,
-		"Akcio": false,
-		"Bonusz_Akcio": true,
-		"Reakcio": true,
-		"Szuletesi_Datum": "1996-06-11"
-	},
-	{
-		"Nev": "Derrik",
-		"HP": 35,
-		"Bonusz": 3,
-		"Rendezesi_Ertek": 10,
-		"Akcio": true,
-		"Bonusz_Akcio": true,
-		"Reakcio": false,
-		"Szuletesi_Datum": "1990-09-23"
-	},
-	{
-		"Nev": "Elandra",
-		"HP": 29,
-		"Bonusz": 2,
-		"Rendezesi_Ertek": 11,
-		"Akcio": false,
-		"Bonusz_Akcio": false,
-		"Reakcio": false,
-		"Szuletesi_Datum": "2000-04-15"
-	},
-	{
-		"Nev": "Varkos",
-		"HP": 55,
-		"Bonusz": 4,
-		"Rendezesi_Ertek": 12,
-		"Akcio": true,
-		"Bonusz_Akcio": true,
-		"Reakcio": true,
-		"Szuletesi_Datum": "1975-01-19"
-	},
-	{
-		"Nev": "Nyssa",
-		"HP": 22,
-		"Bonusz": 1,
-		"Rendezesi_Ertek": 13,
-		"Akcio": false,
-		"Bonusz_Akcio": false,
-		"Reakcio": true,
-		"Szuletesi_Datum": "2002-10-03"
-	},
-	{
-		"Nev": "Haldor",
-		"HP": 48,
-		"Bonusz": 3,
-		"Rendezesi_Ertek": 14,
-		"Akcio": true,
-		"Bonusz_Akcio": false,
-		"Reakcio": true,
-		"Szuletesi_Datum": "1988-07-29"
-	},
-	{
-		"Nev": "Seraphine",
-		"HP": 26,
-		"Bonusz": 4,
-		"Rendezesi_Ertek": 15,
-		"Akcio": false,
-		"Bonusz_Akcio": true,
-		"Reakcio": false,
-		"Szuletesi_Datum": "2003-11-17"
-	},
-	{
-		"Nev": "Keldran",
-		"HP": 44,
-		"Bonusz": 2,
-		"Rendezesi_Ertek": 16,
-		"Akcio": true,
-		"Bonusz_Akcio": true,
-		"Reakcio": false,
-		"Szuletesi_Datum": "1986-03-05"
-	},
-	{
-		"Nev": "Moriel",
-		"HP": 21,
-		"Bonusz": 1,
-		"Rendezesi_Ertek": 17,
-		"Akcio": false,
-		"Bonusz_Akcio": false,
-		"Reakcio": true,
-		"Szuletesi_Datum": "1997-02-10"
-	},
-	{
-		"Nev": "Garruk",
-		"HP": 57,
-		"Bonusz": 3,
-		"Rendezesi_Ertek": 18,
-		"Akcio": true,
-		"Bonusz_Akcio": true,
-		"Reakcio": true,
-		"Szuletesi_Datum": "1973-09-28"
-	},
-	{
-		"Nev": "Ilyndra",
-		"HP": 25,
-		"Bonusz": 2,
-		"Rendezesi_Ertek": 19,
-		"Akcio": false,
-		"Bonusz_Akcio": true,
-		"Reakcio": true,
-		"Szuletesi_Datum": "2001-12-01"
-	},
-	{
-		"Nev": "Toren",
-		"HP": 36,
-		"Bonusz": 2,
-		"Rendezesi_Ertek": 20,
-		"Akcio": true,
-		"Bonusz_Akcio": false,
-		"Reakcio": false,
-		"Szuletesi_Datum": "1992-05-09"
-	},
-	{
-		"Nev": "Aveline",
-		"HP": 23,
-		"Bonusz": 3,
-		"Rendezesi_Ertek": 21,
-		"Akcio": false,
-		"Bonusz_Akcio": true,
-		"Reakcio": false,
-		"Szuletesi_Datum": "1999-08-30"
-	},
-	{
-		"Nev": "Rendak",
-		"HP": 50,
-		"Bonusz": 4,
-		"Rendezesi_Ertek": 22,
-		"Akcio": true,
-		"Bonusz_Akcio": false,
-		"Reakcio": true,
-		"Szuletesi_Datum": "1980-10-11"
-	},
-	{
-		"Nev": "Sylvar",
-		"HP": 31,
-		"Bonusz": 1,
-		"Rendezesi_Ertek": 23,
-		"Akcio": false,
-		"Bonusz_Akcio": true,
-		"Reakcio": true,
-		"Szuletesi_Datum": "1995-04-04"
-	},
-	{
-		"Nev": "Eloria",
-		"HP": 28,
-		"Bonusz": 2,
-		"Rendezesi_Ertek": 24,
-		"Akcio": false,
-		"Bonusz_Akcio": false,
-		"Reakcio": false,
-		"Szuletesi_Datum": "2000-07-08"
-	}
+  {
+    "Nev": "Renda",
+    "HP": 50,
+    "Bonusz": 4,
+    "Rendezesi_Ertek": 22,
+    "Akcio": true,
+    "Bonusz_Akcio": false,
+    "Reakcio": true,
+    "Szuletesi_Datum": "1980-10-11T00:00:00"
+  },
+  {
+    "Nev": "Eloria",
+    "HP": 28,
+    "Bonusz": 2,
+    "Rendezesi_Ertek": 24,
+    "Akcio": false,
+    "Bonusz_Akcio": false,
+    "Reakcio": false,
+    "Szuletesi_Datum": "2000-07-08T00:00:00"
+  },
+  {
+    "Nev": "Aveline",
+    "HP": 23,
+    "Bonusz": 3,
+    "Rendezesi_Ertek": 21,
+    "Akcio": false,
+    "Bonusz_Akcio": true,
+    "Reakcio": false,
+    "Szuletesi_Datum": "1999-08-30T00:00:00"
+  },
+  {
+    "Nev": "Sylvar",
+    "HP": 31,
+    "Bonusz": 1,
+    "Rendezesi_Ertek": 23,
+    "Akcio": false,
+    "Bonusz_Akcio": true,
+    "Reakcio": true,
+    "Szuletesi_Datum": "1995-04-04T00:00:00"
+  },
+  {
+    "Nev": "Toren",
+    "HP": 36,
+    "Bonusz": 2,
+    "Rendezesi_Ertek": 20,
+    "Akcio": true,
+    "Bonusz_Akcio": false,
+    "Reakcio": false,
+    "Szuletesi_Datum": "1992-05-09T00:00:00"
+  },
+  {
+    "Nev": "Garruk",
+    "HP": 57,
+    "Bonusz": 3,
+    "Rendezesi_Ertek": 18,
+    "Akcio": true,
+    "Bonusz_Akcio": true,
+    "Reakcio": true,
+    "Szuletesi_Datum": "1973-09-28T00:00:00"
+  },
+  {
+    "Nev": "Ilyndra",
+    "HP": 25,
+    "Bonusz": 2,
+    "Rendezesi_Ertek": 19,
+    "Akcio": false,
+    "Bonusz_Akcio": true,
+    "Reakcio": true,
+    "Szuletesi_Datum": "2001-12-01T00:00:00"
+  },
+  {
+    "Nev": "Seraphine",
+    "HP": 26,
+    "Bonusz": 4,
+    "Rendezesi_Ertek": 15,
+    "Akcio": false,
+    "Bonusz_Akcio": true,
+    "Reakcio": false,
+    "Szuletesi_Datum": "2003-11-17T00:00:00"
+  },
+  {
+    "Nev": "Keldran",
+    "HP": 44,
+    "Bonusz": 2,
+    "Rendezesi_Ertek": 16,
+    "Akcio": true,
+    "Bonusz_Akcio": true,
+    "Reakcio": false,
+    "Szuletesi_Datum": "1986-03-05T00:00:00"
+  },
+  {
+    "Nev": "Moriel",
+    "HP": 21,
+    "Bonusz": 1,
+    "Rendezesi_Ertek": 17,
+    "Akcio": false,
+    "Bonusz_Akcio": false,
+    "Reakcio": true,
+    "Szuletesi_Datum": "1997-02-10T00:00:00"
+  },
+  {
+    "Nev": "Haldor",
+    "HP": 48,
+    "Bonusz": 3,
+    "Rendezesi_Ertek": 14,
+    "Akcio": true,
+    "Bonusz_Akcio": false,
+    "Reakcio": true,
+    "Szuletesi_Datum": "1988-07-29T00:00:00"
+  },
+  {
+    "Nev": "Varkos",
+    "HP": 55,
+    "Bonusz": 4,
+    "Rendezesi_Ertek": 12,
+    "Akcio": true,
+    "Bonusz_Akcio": true,
+    "Reakcio": true,
+    "Szuletesi_Datum": "1975-01-19T00:00:00"
+  },
+  {
+    "Nev": "Nyssa",
+    "HP": 22,
+    "Bonusz": 1,
+    "Rendezesi_Ertek": 13,
+    "Akcio": false,
+    "Bonusz_Akcio": false,
+    "Reakcio": true,
+    "Szuletesi_Datum": "2002-10-03T00:00:00"
+  },
+  {
+    "Nev": "Derrik",
+    "HP": 35,
+    "Bonusz": 3,
+    "Rendezesi_Ertek": 10,
+    "Akcio": true,
+    "Bonusz_Akcio": true,
+    "Reakcio": false,
+    "Szuletesi_Datum": "1990-09-23T00:00:00"
+  },
+  {
+    "Nev": "Elandra",
+    "HP": 29,
+    "Bonusz": 2,
+    "Rendezesi_Ertek": 11,
+    "Akcio": false,
+    "Bonusz_Akcio": false,
+    "Reakcio": false,
+    "Szuletesi_Datum": "2000-04-15T00:00:00"
+  },
+  {
+    "Nev": "Nimrielle",
+    "HP": 20,
+    "Bonusz": 4,
+    "Rendezesi_Ertek": 7,
+    "Akcio": false,
+    "Bonusz_Akcio": true,
+    "Reakcio": false,
+    "Szuletesi_Datum": "2004-02-28T00:00:00"
+  },
+  {
+    "Nev": "Kaela",
+    "HP": 27,
+    "Bonusz": 2,
+    "Rendezesi_Ertek": 9,
+    "Akcio": false,
+    "Bonusz_Akcio": true,
+    "Reakcio": true,
+    "Szuletesi_Datum": "1996-06-11T00:00:00"
+  },
+  {
+    "Nev": "Borin",
+    "HP": 41,
+    "Bonusz": 1,
+    "Rendezesi_Ertek": 8,
+    "Akcio": true,
+    "Bonusz_Akcio": false,
+    "Reakcio": true,
+    "Szuletesi_Datum": "1978-12-07T00:00:00"
+  },
+  {
+    "Nev": "Faelar",
+    "HP": 38,
+    "Bonusz": 3,
+    "Rendezesi_Ertek": 5,
+    "Akcio": true,
+    "Bonusz_Akcio": false,
+    "Reakcio": false,
+    "Szuletesi_Datum": "1993-05-17T00:00:00"
+  },
+  {
+    "Nev": "Rothgar",
+    "HP": 52,
+    "Bonusz": 2,
+    "Rendezesi_Ertek": 6,
+    "Akcio": true,
+    "Bonusz_Akcio": true,
+    "Reakcio": true,
+    "Szuletesi_Datum": "1982-08-14T00:00:00"
+  },
+  {
+    "Nev": "Morgath",
+    "HP": 60,
+    "Bonusz": 4,
+    "Rendezesi_Ertek": 3,
+    "Akcio": true,
+    "Bonusz_Akcio": true,
+    "Reakcio": true,
+    "Szuletesi_Datum": "1970-09-05T00:00:00"
+  },
+  {
+    "Nev": "Lyra",
+    "HP": 28,
+    "Bonusz": 3,
+    "Rendezesi_Ertek": 3,
+    "Akcio": false,
+    "Bonusz_Akcio": true,
+    "Reakcio": true,
+    "Szuletesi_Datum": "2001-07-21T00:00:00"
+  },
+  {
+    "Nev": "Selene",
+    "HP": 24,
+    "Bonusz": 2,
+    "Rendezesi_Ertek": 4,
+    "Akcio": false,
+    "Bonusz_Akcio": false,
+    "Reakcio": true,
+    "Szuletesi_Datum": "1999-01-30T00:00:00"
+  },
+  {
+    "Nev": "Arin",
+    "HP": 32,
+    "Bonusz": 2,
+    "Rendezesi_Ertek": 1,
+    "Akcio": true,
+    "Bonusz_Akcio": false,
+    "Reakcio": true,
+    "Szuletesi_Datum": "1998-03-12T00:00:00"
+  },
+  {
+    "Nev": "Thord",
+    "HP": 45,
+    "Bonusz": 1,
+    "Rendezesi_Ertek": 2,
+    "Akcio": true,
+    "Bonusz_Akcio": true,
+    "Reakcio": false,
+    "Szuletesi_Datum": "1985-11-02T00:00:00"
+  }
 ]
